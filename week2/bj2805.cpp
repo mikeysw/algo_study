@@ -20,13 +20,13 @@ int main(){
 
     while(low <= high){
         mid = (low + high) / 2;
-        cout << "mid: " << mid << endl;
+        //cout << "mid: " << mid << endl;
         long long cnt = 0;
 
         for(int i=0; i<N; i++){
             if(trees[i]>=mid) cnt += (trees[i] - mid);
         }
-        cout << "cnt: " << cnt << endl;
+        //cout << "cnt: " << cnt << endl;
 
         if(cnt >= M){
             ans = mid;

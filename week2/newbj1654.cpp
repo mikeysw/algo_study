@@ -3,27 +3,27 @@
 using namespace std;
 
 int main(){
-    int K, N;
+    unsigned int K, N;
     cin >> K >> N;
 
-    int karr[10000];
-    int total = 0;
-    int max1 = 0;
+    unsigned int karr[10000];
+    unsigned int total = 0;
+    unsigned int max1 = 0;
     for(int i=0; i<K; i++){
         cin >> karr[i];
         total += karr[i];
         if(max1 < karr[i]) max1 = karr[i];
     }
 
-    int low = 1;
-    int high = max1;
+    unsigned int low = 1;
+    unsigned int high = max1;
 
    
-    int flag = 0;
-    int cnt;
+    unsigned int flag = 0;
+    unsigned int cnt;
 
     while(low <= high){
-        int mid = (low+high) / 2;
+        unsigned int mid = (low+high) / 2;
         cnt = 0;
 
         for(int k=0; k<K; k++){
